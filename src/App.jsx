@@ -27,7 +27,6 @@ export function Board({ xIsNext, squares, onPlay }) {
   }
 
   const winner = calculateWinner(squares);
-  const [isExploding, setIsExploding] = useState(false);
 
   //let curStatus;
   let status;
