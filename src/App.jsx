@@ -13,7 +13,7 @@ export function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     const nextSquares = squares.slice();
 
-    if (calculateWinner(squares) || squares[i]) {
+    if(calculateWinner(squares) || squares[i]) {
       return;
     }
 
@@ -27,6 +27,8 @@ export function Board({ xIsNext, squares, onPlay }) {
   }
 
   const winner = calculateWinner(squares);
+  const [isExploding, setIsExploding] = useState(false);
+
   //let curStatus;
   let status;
   if (winner) {
@@ -85,7 +87,7 @@ export default function Game() {
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className='btn' onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
@@ -122,10 +124,4 @@ function calculateWinner(squares) {
   return null;
 }
 
-// function App() {
 
-//   return (
-//   )
-// }
-
-// export default App

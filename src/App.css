@@ -73,7 +73,7 @@ body {
 
 .board-row:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -87,4 +87,26 @@ body {
 
 .game-info {
   margin-left: 20px;
+}
+
+.square.highlight {
+  background: #ddd;
+}
+
+.btn {
+  padding: 6px 18px;
+  margin-bottom: 3%;
+  border-radius: 4px;
+  background-color: #8cf18f;
+  color: #0b6c0e;
+  border: 2px solid #7de881;
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #0f9613;
+  color: #7de881;
+  border: 2px solid #0b8b0f;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
